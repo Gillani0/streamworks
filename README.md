@@ -9,6 +9,10 @@ We provide an implementation of a dynamic graph library and algorithms for perfo
 * Chin Jr G, S Choudhury, and K Agarwal. 2014. “StreamWorks—A System for Real-Time Graph Pattern Matching on Network Traffic.” Presented at FloCon 2015, January 12-15, 2015, Portland, Oregon.
 * Joslyn C, S Choudhury, D Haglin, B Howe, B Nickless, and B Olsen. 2013. “Massive Scale Cyber Traffic Analysis: A Driver for Graph Database Research.” In Proceedings of the First International Workshop on Graph Data Management Experience and Systems (GRADES 2013), Article No. 3. June 23, 2013, New York, New York. Association for Computing Machinery, New York. DOI: 10.1145/2484425.2484428.
 
+### Reproducing results from EDBT'15 paper
+
+### Using our Spark-Streaming module for network traffic aggregation
+
 # Contributors
 * Sutanay Choudhury, Pacific Northwest National Laboratory, USA
 * George Chin, Pacific Northwest National Laboratory, USA
