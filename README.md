@@ -2,7 +2,7 @@
 We provide an implementation of a dynamic graph library and algorithms for performing subgraph isomorphism on a graph stream.
 
 # Use
-## Please cite the following paper if you find the dynamic graph library useful.
+## See the following paper for details on our streaming graph search algorithm and query optimization.
 * Choudhury S, L Holder, G Chin Jr, K Agarwal, and JT Feo. 2015. “A Selectivity-based Approach to Continuous Pattern Detection in Streaming Graphs.” In 18th International Conference on Extending Database Technology (EDBTT 2015). March 23-27, 2015, Brussels, Belgium. 
 ## Check out the following publications for graph query use cases for cyber security data.
 * Chin Jr G, S Choudhury, and K Agarwal. 2014. “StreamWorks—A System for Real-Time Graph Pattern Matching on Network Traffic.” Presented at FloCon 2015, January 12-15, 2015, Portland, Oregon.
