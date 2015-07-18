@@ -7,6 +7,7 @@ We provide an implementation of a dynamic graph library and algorithms for perfo
 * Sutanay Choudhury, Pacific Northwest National Laboratory, USA
 * George Chin, Pacific Northwest National Laboratory, USA
 * Khushbu Agarwal, Pacific Northwest National Laboratory, USA
+* Sherman Beus, Pacific Northwest National Laboratory, USA
 * Vivek Datla, Pacific Northwest National Laboratory, USA
 * Patrick Mackey, Pacific Northwest National Laboratory, USA
 * Lawrence Holder, Washington State University, USA
