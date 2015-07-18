@@ -1,0 +1,14 @@
+v 0 des_facet [label=Travel_and_Vacations]
+v 1 des_facet
+v 2 article
+v 3 article
+v 4 article
+v 5 article
+e 2 0 des
+e 2 1 des
+e 3 0 des
+e 3 1 des
+e 4 0 des
+e 4 1 des
+e 5 0 des
+e 5 1 des

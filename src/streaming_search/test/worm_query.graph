@@ -1,0 +1,7 @@
+v 0 ip deg > 10
+v 1 ip deg > 10
+v 2 ip deg > 10
+v 3 ip
+e 0 1 TCP
+e 1 2 TCP
+e 2 3 TCP

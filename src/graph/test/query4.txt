@@ -1,0 +1,9 @@
+v 0
+v 1
+e 0 1 bytes > 10
+v 2 ip = 109.36.62.243
+v 3
+e 2 3 
+e 1 3 flows <= 3 bytes >= 100 bytes < 1000 protocol = UDP
+e 3 1 packets > 99 flows < 10 bytes != 1000 protocol != TCP
+e 1 0 protocol = ICMP duration < 1000

@@ -1,0 +1,5 @@
+Read the following files in this directory.
+- INSTALL: To build the code.
+- API: Describes core data structures and functions. Useful to extend.
+- BENCHMARK: Follow instructions to benchmark current dynamic graph 
+  search or add support for a new streaming graph data source. 

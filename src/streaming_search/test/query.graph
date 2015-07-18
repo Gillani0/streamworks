@@ -1,0 +1,14 @@
+v 0 geo_facet Libya 
+v 1  des_facet 
+v 2  article
+v 3  article
+v 4  article
+v 5  article
+e 0 2 geo
+e 1 2 des
+e 0 3 geo
+e 1 3 des
+e 0 4 geo
+e 1 4 des
+e 0 5 geo
+e 1 5 des

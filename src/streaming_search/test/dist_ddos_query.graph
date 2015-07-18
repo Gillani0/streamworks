@@ -1,0 +1,31 @@
+v victim ip
+v broadcast1 ip
+v interm11 ip
+v interm12 ip
+v interm13 ip
+e broadcast1 interm11 icmp_echo_req
+e broadcast1 interm12 icmp_echo_req
+e broadcast1 interm13 icmp_echo_req
+e interm11 victim icmp_echo_resp
+e interm12 victim icmp_echo_resp
+e interm13 victim icmp_echo_resp
+v broadcast2 ip
+v interm21 ip
+v interm22 ip
+v interm23 ip
+e broadcast2 interm21 icmp_echo_req
+e broadcast2 interm22 icmp_echo_req
+e broadcast2 interm23 icmp_echo_req
+e interm21 victim icmp_echo_resp
+e interm22 victim icmp_echo_resp
+e interm23 victim icmp_echo_resp
+v broadcast3 ip
+v interm31 ip
+v interm32 ip
+v interm33 ip
+e broadcast3 interm31 icmp_echo_req
+e broadcast3 interm32 icmp_echo_req
+e broadcast3 interm33 icmp_echo_req
+e interm31 victim icmp_echo_resp
+e interm32 victim icmp_echo_resp
+e interm33 victim icmp_echo_resp

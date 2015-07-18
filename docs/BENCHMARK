@@ -1,0 +1,107 @@
+##########################################################
+# 
+# Query Execution: A case study with Network Traffic flow
+# 
+##########################################################
+
+FlowProcessor can be any class that implements two functions:
+
+- void Load()
+This function will load an arbitrary data source to parse vertex and
+edge information. It will should populate two iterable collections from 
+which we can later call AddVertex(...) and AddEdge(...) functions.
+
+As an example, later on we call NetflowProcessor::InitGraph()
+
+StreamG* NetflowProcessor :: InitGraph()
+{
+    VertexProperty<Label> v_prop;
+    unordered_map<string, uint64_t>::iterator v_it; 
+
+    gSearch__ = new Graph<Label, NetflowAttbs>(ip_ids__.size());
+
+    for (v_it = ip_ids__.begin(); v_it != ip_ids__.end(); v_it++) {
+        v_prop.vertex_data.label = v_it->first;
+        gSearch__->AddVertex(v_it->second, v_prop);
+    }   
+
+    gSearch__->AllocateAdjacencyLists();
+    cout << "Graph initialization complete." << endl;
+    return gSearch__;
+}
+
+The FlowProcessor also needs to implement a LoadGraph(...) method
+and a Run(...) function. LoadGraph(...) is necessary to collect subgraph 
+statistics.  Run(...) is the actual function performing the stream
+processing.  Any benchmarking happens inside the Run(...) function.
+
+- uint64_t Run(EdgeFn& edge_functor, string log_path_prefix)
+A case study with New York Times
+
+A case study with RDF stream
+See 
+graph_search/src/streaming_search/dynamic_graph_search.hpp
+
+int main(int argc, char* argv[])
+{
+    dynamic_graph_search_main<StreamG, NetflowProcessor>(argc, argv);
+}
+
+##########################################################
+# 
+# Properties file
+#
+##########################################################
+
+Copy paste the following snippet into a file with .properties extension.
+Each line in the files describe a key-value pair.  Lines (or rather keys)
+that begin with $ are treated as variables.  These variables can be used
+to set other variables subsequently in the file.
+
+///////////////////// Example properties file /////////////////////////
+$test_dir /home/sutanay/test
+num_header_lines 1
+data_path /home/sutanay/data/netflow.txt
+
+# input_format
+# 0 CAIDA_NETFLOW
+
+input_format 0
+
+vertex_property_path $test_dir/caida_flow_vertex.properties
+edge_property_path $test_dir/caida_flow_edge.properties
+path_distribution_data $test_dir/caida_flow_path_distribution.dat
+
+
+edge_distribution_data $test_dir/caida_flow_edge_distribution.dat
+
+# Path query details
+query_path $test_dir/ddos_query.graph
+query_plan $test_dir/ddos_query.graph.plan
+
+decompose_paths 0
+selectivity_path $test_dir/caida_flow_path_selectivity.csv
+rel_selectivity_path $test_dir/caida_flow_path_relative_selectivity.csv
+
+search_offset 0
+num_edges_to_process_M 1
+query_algo SingleLazy
+#Single SingleLazy Path PathLazy VF2
+run_search yes
+
+##########################################################
+# 
+# Running the query
+#
+##########################################################
+Build the executable, say run_test.x
+
+./run_test.x <your-property-file-path>
+
+##########################################################
+# 
+# Query generation
+#
+##########################################################
+
+

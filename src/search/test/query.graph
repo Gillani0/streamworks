@@ -1,0 +1,8 @@
+v 0 ip deg>19
+v 1 ip deg>19
+v 2 ip deg>19
+v 3 ip
+e 0 1 TCP num_bytes>1024
+e 1 2 TCP num_bytes>1024
+e 2 3 TCP num_bytes>1024
+q GROUPBY 0 DISTINCT_COUNT_GEQ 8000

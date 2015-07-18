@@ -1,0 +1,6 @@
+{
+    "data_schema" : "test/nyt/nyt_schema.txt",
+    "data_graph" : "test/nyt/nytimes.list",
+    "query_graph" : "test/nyt/nytimes_query.net",
+    "query_plan" : "test/nyt/nytimes_query.plan"
+}

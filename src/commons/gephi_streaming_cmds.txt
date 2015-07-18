@@ -1,0 +1,3 @@
+curl "http://localhost:8080/workspace0?operation=updateGraph" -d "{\"an\":{\"%d\":{\"label\":\"%d\"}}}"
+curl "http://localhost:8080/workspace0?operation=updateGraph" -d "{\"ae\":{\"%d_%d\":{\"source\":\"%d\",\"target\":\"%d\",\"directed\":true,\"weight\":\"%d\"}}}"
+curl "http://localhost:8080/workspace0?operation=updateGraph" -d "{\"de\":{\"%d_%d\":{}}}"

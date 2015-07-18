@@ -1,0 +1,11 @@
+v 0 ip
+v 1 ip
+v 2 ip
+v 3 ip
+v 4 ip
+e 0 2 TCP
+e 0 1 TCP
+e 0 3 TCP
+e 3 1 TCP
+e 0 4 TCP
+e 4 1 TCP

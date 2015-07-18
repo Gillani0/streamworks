@@ -1,0 +1,4 @@
+v 0 deg > 10
+v 1 deg == 1
+e 0 1 packets <= 3 bytes >= 192 duration != 1000 protocol = UDP
+e 1 0 date_time < 1/2/13_4:25:03

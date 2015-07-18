@@ -1,0 +1,7 @@
+Example Fig. 3b in SIGMOD demo track submission.
+- Support temporal ordering in query and search.
+
+Example 3.d:
+- How to distinguish that DNS query response into a high
+degree node is rare? So don't look for a graph match, just
+check the property.

@@ -1,0 +1,44 @@
+Unzip the source tar.  This will create the following directory 
+structure.
+- graph_search
+- graph_search/src
+- graph_search/deps
+- graph_search/include
+- graph_search/lib
+
+# Dependencies
+- Python 2.7 at least
+- Boost 1.51.0
+
+#########################################
+#
+# INSTALL
+#
+#########################################
+
+- Download Boost 1.51.0
+- Assuming boost_1_51_0.tar.gz is downloaded and uncompressed in
+  .../deps/, run the following commands.
+- cd deps; mkdir boost_libs
+- cd boost_1_51_0
+- Run booststrap.sh with the following options.  
+  Run bootstrap.sh -h to see how the options should be specified.
+  ---- prefix : ../boost_libs
+  ---- exec-prefix : ../boost_libs
+  ---- libdir : ../boost_libs/lib
+  ---- includedir : ../boost_libs/include
+- Compile boost.  See instructions on the Boost website to run bjam.
+- Now required boost libraries should be placed under boost_libs/include
+  and boost_libs/lib
+- The code only statically links to boost_libs/lib/libboost_regex.a 
+  among libraries.  Sometimes it can be tricky to build all boost libraries,
+  so skip others if that is the case.
+
+#########################################
+#
+# BUILDING THE GRAPH LIBRARY
+#
+#########################################
+- Go to graph_search/src/
+- Execute the build script. This will in turn enter core sub-directories
+  and run make.

@@ -1,0 +1,10 @@
+entity Label 
+    string ip_addr
+
+relation NetflowAttbs 
+    int src_port
+    time_t timestamp
+    int num_bytes
+    int num_packets
+    int dst_port
+    float duration

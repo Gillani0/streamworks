@@ -1,0 +1,4 @@
+ICMP 0
+TCP 1
+UDP 2
+IPv6 2

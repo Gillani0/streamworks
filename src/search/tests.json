@@ -1,0 +1,47 @@
+{
+   "tests": 
+   [
+       {
+        "desc": "Edge query (A->B)", 
+        "query": "test/edge_query.net",
+        "data": "test/path_data.net",
+        "num_matches": 4 
+       },
+       {
+        "desc": "Path query (A->B->C->D)", 
+        "query": "test/path_query.net",
+        "data": "test/path_data.net",
+        "num_matches": 2
+       },
+       {
+        "desc": "Symmetric triangle query (A->B, B->C, C->A)", 
+        "query": "test/triangle_sym_query.net",
+        "data": "test/triangle_sym_data.net",
+        "num_matches": 3
+       },
+       {
+        "desc": "Asymmetric triangle query (A->B, B->C, A->C)", 
+        "query": "test/triangle_asym_query.net",
+        "data": "test/triangle_asym_data.net",
+        "num_matches": 1
+       },
+       {
+        "desc": "Twig query (A->B, A->C)", 
+        "query": "test/twig_query1.net",
+        "data": "test/twig_data.net",
+        "num_matches": 2
+       },
+       {
+        "desc": "Twig query (B->A, C->A)", 
+        "query": "test/twig_query2.net",
+        "data": "test/twig_data.net",
+        "num_matches": 2
+       },
+       {
+        "desc": "Twig query (A->B, C->A)", 
+        "query": "test/twig_query3.net",
+        "data": "test/twig_data.net",
+        "num_matches": 1
+       }
+   ]
+}
