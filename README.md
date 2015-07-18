@@ -4,6 +4,7 @@ We provide an implementation of a dynamic graph library and algorithms for perfo
 # Use
 ## See the following paper for details on our streaming graph search algorithm and query optimization.
 * Choudhury S, L Holder, G Chin Jr, K Agarwal, and JT Feo. 2015. “A Selectivity-based Approach to Continuous Pattern Detection in Streaming Graphs.” In 18th International Conference on Extending Database Technology (EDBTT 2015). March 23-27, 2015, Brussels, Belgium. 
+
 ## Check out the following publications for graph query use cases for cyber security data.
 * Chin Jr G, S Choudhury, and K Agarwal. 2014. “StreamWorks—A System for Real-Time Graph Pattern Matching on Network Traffic.” Presented at FloCon 2015, January 12-15, 2015, Portland, Oregon.
 * Joslyn C, S Choudhury, D Haglin, B Howe, B Nickless, and B Olsen. 2013. “Massive Scale Cyber Traffic Analysis: A Driver for Graph Database Research.” In Proceedings of the First International Workshop on Graph Data Management Experience and Systems (GRADES 2013), Article No. 3. June 23, 2013, New York, New York. Association for Computing Machinery, New York. DOI: 10.1145/2484425.2484428.
