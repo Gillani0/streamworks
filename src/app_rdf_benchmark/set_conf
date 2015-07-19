@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+import sys 
+
+if len(sys.argv) == 2:
+    print('set_conf properties-file key1=val1,key2=val2...')
+    sys.exit(0)
+
+prop_path = sys.argv[1]
+key_values = sys.argv[2]
+tokens = key_values.split(',')
+set_kvs = dict()
+for t in tokens:
+    kv_pair = t.split('=')
+    set_kvs[kv_pair[0]] = kv_pair[1]
+    
+#fin = open('test/lsbench.properties', 'r')
+fin = open(prop_path, 'r')
+out_lines = []
+for line in fin:
+    line = line.strip() 
+    if len(line) > 0 and line[0] != '#':
+        tokens = line.split(' ')
+        if tokens[0] in set_kvs:
+            out_lines.append(tokens[0] + ' ' + set_kvs[tokens[0]] + '\n')
+        else:
+            out_lines.append(line + '\n')
+    else:
+        out_lines.append(line + '\n')
+fin.close()
+
+#fout = open('test/lsbench.properties', 'w')
+fout = open(prop_path, 'w')
+for line in out_lines:
+    fout.write(line)
+fout.close()
