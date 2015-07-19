@@ -1,0 +1,11 @@
+#!/usr/bin/python
+import os
+
+modules = ['commons', 'graph', 'search', 'streaming_search', 'query_opt', \
+    'app_network_traffic', 'app_rdf_benchmark'] 
+
+for m in modules:
+    print('+++++++++++++++++++++++++++++++++++')
+    print('Building ' + m)
+    print('+++++++++++++++++++++++++++++++++++')
+    os.system('cd ' + m + '; make clean; make; cd ..')
